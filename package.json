@@ -1,94 +1,106 @@
 {
-  "name": "angular2-mdl",
-  "version": "0.0.0",
-  "license": "MIT",
-  "description": "Angular 2 components, directives and styles based on material design lite https://getmdl.io.",
-  "homepage": "http://mseemann.io/angular2-mdl/",
-  "keywords": [],
-  "scripts": {
-    "build": "rimraf dist && cross-env NODE_ENV=production webpack --config config/webpack/webpack.prod.js --progress --profile",
-    "build:clean": "rimraf dist",
-    "build:dist": "npm run build:clean && npm run build:umd && npm run build:esm && npm run build:scss && cp src/lib/package.json dist && cp README.md dist",
-    "build:esm": "ngc -p src/lib/tsconfig-ngc.json",
-    "build:scss": "ncp src/lib/scss dist/scss",
-    "build:umd": "webpack --config config/webpack/webpack.config.umd.js --progress",
-    "codeclimate": "CODECLIMATE_REPO_TOKEN=160aba8aa0baa5d0cab1d2162f50027cef9cda032fbc4eebefd54167ddce4c89 codeclimate-test-reporter < coverage/lcov.info",
-    "deploy-gh-pages": "npm run build && ./scripts/deploy.sh --message \"Deploy gh-pages from commit $(git rev-parse HEAD)  [ci skip]\" -n",
-    "e2e": "protractor config/protractor.sauce.conf.js",
-    "e2e:local": "protractor config/protractor.conf.js",
-    "generate-scss-from-mdl-scss": "rimraf src/lib/scss/mdl && node ./scripts/generate-scss-from-mdl-scss.js",
-    "pree2e": "webdriver-manager update; tsc --project e2e",
-    "start": "webpack-dev-server",
-    "test": "karma start config/karma.conf.js",
-    "test:watch": "karma start config/karma.conf.js --watch"
+  "_args": [
+    [
+      {
+        "raw": "angular2-mdl@^2.0.1",
+        "scope": null,
+        "escapedName": "angular2-mdl",
+        "name": "angular2-mdl",
+        "rawSpec": "^2.0.1",
+        "spec": ">=2.0.1 <3.0.0",
+        "type": "range"
+      },
+      "C:\\git\\asesores"
+    ]
+  ],
+  "_from": "angular2-mdl@>=2.0.1 <3.0.0",
+  "_id": "angular2-mdl@2.3.1",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/angular2-mdl",
+  "_nodeVersion": "5.10.1",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/angular2-mdl-2.3.1.tgz_1477736691492_0.47571655130013824"
   },
-  "private": true,
+  "_npmUser": {
+    "name": "mseemann",
+    "email": "apps@mseemann.de"
+  },
+  "_npmVersion": "3.8.3",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "angular2-mdl@^2.0.1",
+    "scope": null,
+    "escapedName": "angular2-mdl",
+    "name": "angular2-mdl",
+    "rawSpec": "^2.0.1",
+    "spec": ">=2.0.1 <3.0.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/angular2-mdl/-/angular2-mdl-2.3.1.tgz",
+  "_shasum": "f58c33ea8a9f4671220f3d1c0e62f55d34282b50",
+  "_shrinkwrap": null,
+  "_spec": "angular2-mdl@^2.0.1",
+  "_where": "C:\\git\\asesores",
+  "bugs": {
+    "url": "https://github.com/mseemann/angular2-mdl/issues"
+  },
+  "dependencies": {},
+  "description": "Angular 2 components, directives and styles based on material design lite https://getmdl.io.",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "f58c33ea8a9f4671220f3d1c0e62f55d34282b50",
+    "tarball": "https://registry.npmjs.org/angular2-mdl/-/angular2-mdl-2.3.1.tgz"
+  },
+  "homepage": "http://mseemann.io/angular2-mdl/",
+  "keywords": [
+    "angular 2",
+    "angular2",
+    "material",
+    "material design",
+    "material design lite",
+    "components",
+    "typescript",
+    "button",
+    "card",
+    "chips",
+    "dialog",
+    "snackbar",
+    "layouts",
+    "reactive forms",
+    "tables",
+    "tabs",
+    "test fields",
+    "toggle"
+  ],
+  "license": "MIT",
+  "main": "./bundle/angular2-mdl.js",
+  "maintainers": [
+    {
+      "name": "mseemann",
+      "email": "apps@mseemann.de"
+    }
+  ],
+  "module": "./components/index.js",
+  "name": "angular2-mdl",
+  "optionalDependencies": {},
+  "peerDependencies": {
+    "@angular/core": "^2.0.2",
+    "@angular/common": "^2.0.2",
+    "@angular/forms": "^2.0.2"
+  },
+  "private": false,
+  "readme": "ERROR: No README data found!",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mseemann/angular2-mdl.git"
   },
-  "devDependencies": {
-    "@angular/common": "2.1.1",
-    "@angular/compiler": "2.1.1",
-    "@angular/compiler-cli": "2.1.1",
-    "@angular/core": "2.1.1",
-    "@angular/forms": "2.1.1",
-    "@angular/http": "2.1.1",
-    "@angular/platform-browser": "2.1.1",
-    "@angular/platform-browser-dynamic": "2.1.1",
-    "@angular/platform-server": "2.1.1",
-    "@angular/router": "3.1.1",
-    "@types/jasmine": "2.2.33",
-    "@types/node": "6.0.38",
-    "@types/protractor": "1.5.20",
-    "@types/selenium-webdriver": "2.44.29",
-    "angular2-template-loader": "0.6.0",
-    "autoprefixer": "6.5.1",
-    "awesome-typescript-loader": "2.2.4",
-    "codeclimate-test-reporter": "0.4.0",
-    "codelyzer": "0.0.28",
-    "copy-webpack-plugin": "4.0.0",
-    "core-js": "2.4.1",
-    "coveralls": "2.11.14",
-    "cross-env": "3.1.3",
-    "css-loader": "0.25.0",
-    "extract-text-webpack-plugin": "2.0.0-beta.4",
-    "file-loader": "0.9.0",
-    "handlebars-loader": "1.4.0",
-    "html-loader": "0.4.4",
-    "html-webpack-plugin": "2.24.1",
-    "jasmine-core": "2.5.2",
-    "jasmine-spec-reporter": "2.7.0",
-    "karma": "1.3.0",
-    "karma-chrome-launcher": "2.0.0",
-    "karma-jasmine": "1.0.2",
-    "karma-remap-istanbul": "0.2.1",
-    "karma-spec-reporter": "0.0.26",
-    "karma-webpack": "1.8.0",
-    "material-design-lite": "1.2.1",
-    "ncp": "2.0.0",
-    "node-sass": "3.10.1",
-    "postcss-loader": "1.1.0",
-    "protractor": "4.0.10",
-    "raw-loader": "0.5.1",
-    "rimraf": "2.5.4",
-    "rxjs": "5.0.0-beta.12",
-    "sass-loader": "4.0.2",
-    "sourcemap-istanbul-instrumenter-loader": "0.2.0",
-    "string-replace-loader": "1.0.5",
-    "style-loader": "0.13.1",
-    "ts-node": "1.6.1",
-    "tslint": "3.15.1",
-    "tslint-loader": "2.1.5",
-    "typescript": "2.0.6",
-    "typings": "1.5.0",
-    "web-animations-js": "2.2.2",
-    "webpack": "2.1.0-beta.25",
-    "webpack-dev-server": "2.1.0-beta.4",
-    "webpack-merge": "0.15.0",
-    "zone.js": "0.6.25"
-  },
-  "optionalDependencies": {
-    "fsevents": "^1.0.14"
-  }
+  "scripts": {},
+  "typings": "./components/index.d.ts",
+  "version": "2.3.1"
 }
