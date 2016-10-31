@@ -48,7 +48,7 @@ export class MdLUnsupportedLayoutTypeError extends MdlError {
         <ng-content select="mdl-layout-header"></ng-content>
         <ng-content select="mdl-layout-drawer"></ng-content>
         <div *ngIf="drawer && isNoDrawer==false" class="mdl-layout__drawer-button" (click)="toggleDrawer()">
-           <mdl-icon>&#xE5D2;</mdl-icon>
+           <mdl-icon>&#xE85A;</mdl-icon>
         </div>
         <ng-content select="mdl-layout-content"></ng-content>
         <div class="mdl-layout__obfuscator"
