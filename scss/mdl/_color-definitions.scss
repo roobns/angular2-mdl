@@ -19,6 +19,40 @@
 // Color order: 50, 100, 200, 300, 400, 500, 600, 700, 800, 900, A100, A200,
 // A400, A700.
 
+/* For use in _color-definitions.scss */
+
+$palette-actinver:
+"98, 148, 244"
+"27, 100, 239"
+"14, 76, 196"
+"9, 50, 129"
+"7, 39, 101"
+"5, 28, 72"
+"3, 17, 43"
+"1, 6, 15"
+"0, 0, 0"
+"0, 0, 0"
+"98, 148, 244"
+"27, 100, 239"
+"7, 39, 101"
+"1, 6, 15";
+
+
+$palette-actinver-50: nth($palette-actinver, 1);
+$palette-actinver-100: nth($palette-actinver, 2);
+$palette-actinver-200: nth($palette-actinver, 3);
+$palette-actinver-300: nth($palette-actinver, 4);
+$palette-actinver-400: nth($palette-actinver, 5);
+$palette-actinver-500: nth($palette-actinver, 6);
+$palette-actinver-600: nth($palette-actinver, 7);
+$palette-actinver-700: nth($palette-actinver, 8);
+$palette-actinver-800: nth($palette-actinver, 9);
+$palette-actinver-900: nth($palette-actinver, 10);
+$palette-actinver-A100: nth($palette-actinver, 11);
+$palette-actinver-A200: nth($palette-actinver, 12);
+$palette-actinver-A400: nth($palette-actinver, 13);
+$palette-actinver-A700: nth($palette-actinver, 14);
+
 $palette-red:
 "255,235,238"
 "255,205,210"
